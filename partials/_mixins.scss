@@ -1,0 +1,7 @@
+@mixin cards($color: cyan) {
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    font-size: $font_size;
+    display: flex;
+    justify-content: center;
+    color: $color;
+}

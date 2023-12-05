@@ -1,0 +1,16 @@
+@import "./partials/variables";
+@import "./partials/mixins";
+
+nav {
+    font-size: large;
+    font-family: 'Courier New', Courier, monospace;
+    font-weight: bold;
+    color: $primary_color;
+    background-color: aliceblue;
+}
+
+p {
+    @extend nav;
+    color: black;
+}
+

@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Navigation</title>
+</head>
+<body>
+    <button onclick="getCoords()">Get Coordinates</button>
+    <div id="weather"></div>
+    <script>
+        const getCoords = () => {
+            navigator.geolocation.getCurrentPosition((position) => {
+                const lat = position.coords.latitude
+                const long = position.coords.longitude
+
+                fetch(`http://api.weatherapi.com/v1/current.json?q=${lat},${long}&key=1db4640dedd8405b9bd195826221804`)
+                .then(data => data.json())
+                .then(weather => {
+                    document.getElementById("weather").innerHTML = `<h1>Weather in ${weather.location.name} is ${weather.current.temp_c} C</h1>`
+                })
+            })
+    }
+    </script>
+</body>
+</html>

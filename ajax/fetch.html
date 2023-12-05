@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Using Fetch</title>
+</head>
+<body>
+    <button onload="loadData()">Load Data</button>
+    <script>
+        const loadData = () => {
+            fetch("https://fakestoreapi.com/products") // Get
+            .then(data => data.json()) // convert
+            .then(products => { // your data
+                console.log(products)
+            })
+
+            }
+    </script>
+</body>
+</html>

@@ -1,0 +1,38 @@
+* {
+    margin: 0 auto;
+}
+header {
+    width: 100%;
+    height: 100px;
+    float: left;
+    border: 1px solid red;
+}
+span#search {
+    float: right;
+    margin-top: 65px;
+}
+input#search-field {
+    border: 1px solid gray;
+    border-radius: 3px;
+}
+nav {
+    border: 1px solid blue;
+    height: 50px;
+}
+nav ul {
+    list-style-type: none;
+    padding-top: 15px;
+}
+nav ul li {
+    display: inline-block;
+    padding-left: 70px;
+}
+nav ul li a {
+    font-size: large;
+    font-family: 'Times New Roman', Times, serif;
+    font-weight: bolder;
+    text-decoration: none;
+}
+nav ul li a:hover {
+    text-decoration: underline;
+}
